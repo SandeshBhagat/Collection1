@@ -7,7 +7,7 @@ import moment from "moment";
 
 const Home = () => {
   const [data, setData] = useState([]);
-  console.log(data);
+  // console.log(data);
   const getUserData = async () => {
     const res = await axios.get("http://localhost:8005/getdata", {
       headers: {
@@ -24,9 +24,24 @@ const Home = () => {
     }
   };
 
+  const dltUser = async (id) => {
+    const res = await axios.delete(`http://localhost:8005/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (res.data.status === 401 || !res.data) {
+      console.log("error");
+    } else {
+      console.log("user deleted");
+      console.log(res.data);
+    }
+  };
+
   useEffect(() => {
     getUserData();
-  });
+  }, [dltUser]);
   return (
     <>
       <div className="container mt-2">
@@ -65,7 +80,11 @@ const Home = () => {
                         <Card.Text>
                           Date Added: {moment(el.date).format("L")}
                         </Card.Text>
-                        <Button variant="danger" className="ps-5 pe-5">
+                        <Button
+                          variant="danger"
+                          className="ps-5 pe-5"
+                          onClick={() => dltUser(el._id)}
+                        >
                           delete
                         </Button>
                       </Card.Body>

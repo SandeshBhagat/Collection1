@@ -64,4 +64,14 @@ router.get("/getdata", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const dltUser = await users.findByIdAndDelete({ _id: id });
+    res.status(201).json({ status: 201, dltUser });
+  } catch (error) {
+    res.status(401).json({ status: 401, error });
+  }
+});
+
 module.exports = router;

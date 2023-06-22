@@ -7,14 +7,19 @@ const Header = () => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        <Navbar.Brand>
+          <NavLink to="/" className="text-light text-decoration-none" >Navbar</NavLink>
+        </Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link>
-            <NavLink to="/register">Register</NavLink>
-          </Nav.Link>
-          <Nav.Link>
-            <NavLink to="/login">Login</NavLink>
-          </Nav.Link>
+          <NavLink
+            to="/register"
+            className="text-light text-decoration-none me-3"
+          >
+            Register
+          </NavLink>
+          <NavLink to="/login" className="text-light text-decoration-none">
+            Login
+          </NavLink>
         </Nav>
       </Container>
     </Navbar>
