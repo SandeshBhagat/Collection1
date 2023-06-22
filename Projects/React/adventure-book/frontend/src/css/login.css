@@ -1,0 +1,62 @@
+.main.bg{
+    background-image: url('../assets/img/login-bg.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90.5vh;
+    position: relative
+}
+.bgcover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000089;
+}
+
+.formLogin{
+    z-index: 999;
+    background: #eee;
+    margin-right: 300px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 10px 10px 20px #333333d1;
+}
+
+.formLogin h1{
+    margin-bottom: 40px;
+}
+.formLogin input{
+    width: 300px;
+    margin: 10px;
+    padding: 3px 5px;
+    height: 40px;
+    font-size: 14px;
+
+}
+.formLogin input[type="submit"]{
+    margin-top: 40px;
+    background: #b3b3b3;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.formLogin input[type="submit"]:hover{
+    background: #cfcfcf;
+    border: 2px solid #09810996;
+}
+
+.formLogin p > a{
+    text-decoration: none;
+    font-weight: bold;
+}
