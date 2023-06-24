@@ -17,8 +17,11 @@ const Header = () => {
           >
             Register
           </NavLink>
-          <NavLink to="/login" className="text-light text-decoration-none">
+          <NavLink to="/login" className="text-light text-decoration-none me-3">
             Login
+          </NavLink>
+          <NavLink to="/add" className="text-light text-decoration-none">
+            Add
           </NavLink>
         </Nav>
       </Container>
