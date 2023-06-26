@@ -1,0 +1,94 @@
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.alladv-main{
+    /* border: 2px solid red; */
+    padding: 40px;
+}
+.alladv-main h2{
+    margin-bottom: 20px;
+}
+.cards-container{
+    /* border: 2px solid blue; */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+.card{
+    /* border: 2px solid green; */
+    max-width: 300px;
+    padding: 10px;
+    background: #f7f7f7;
+    box-shadow: 3px 3px 15px #00000046;
+    transition: all .3s ease-in-out;
+}
+.card:hover{
+    box-shadow: 0px 0px 0px 3px #ff8d01;
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.card img{
+    width: 100%;
+}
+.card .title{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff7105;
+}
+.card .date{
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #7e7e7e;
+}
+.card .description{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.card .btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .btns .delete{
+     color: #ff7105;
+     background: #fff;
+     padding: 10px;
+     border-radius: 50%;
+     height: 28px;
+     width: 28px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 1px 0px 5px #00000078;
+}
+
+
+.card .btns .edit-btn{
+    border: none;
+    background: #ff7105;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+/* .card .btns .dlt{
+    border: none;
+    background: #ff0000;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+} */
+

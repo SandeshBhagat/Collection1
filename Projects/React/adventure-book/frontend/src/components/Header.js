@@ -8,7 +8,9 @@ const Header = () => {
     <Navbar bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>
-          <NavLink to="/" className="text-light text-decoration-none" >Navbar</NavLink>
+          <NavLink to="/" className="text-light text-decoration-none">
+            Navbar
+          </NavLink>
         </Navbar.Brand>
         <Nav className="me-auto">
           <NavLink
@@ -20,8 +22,17 @@ const Header = () => {
           <NavLink to="/login" className="text-light text-decoration-none me-3">
             Login
           </NavLink>
-          <NavLink to="/add" className="text-light text-decoration-none">
+          <NavLink to="/add" className="text-light text-decoration-none me-3">
             Add
+          </NavLink>
+          <NavLink
+            to="/viewadv"
+            className="text-light text-decoration-none me-3"
+          >
+            ViewAdv
+          </NavLink>
+          <NavLink to="/alladv" className="text-light text-decoration-none">
+            AllAdv
           </NavLink>
         </Nav>
       </Container>
